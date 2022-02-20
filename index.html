@@ -19,8 +19,8 @@
 <body>
     <div id="bg"></div>
     <div id="main-container">
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-dark">
+        <header id="h">
+            <nav class="navbar navbar-collapse-sm navbar-expand-lg navbar-dark">
                 <div>
                     <a class="navbar-brand btn" id="here" href="#"> <span class="text">Text</span>
                         <span class="flip-front">Despoina</span>
@@ -40,8 +40,8 @@
                                         Generator</span><span id="circle"></span></span> </a>
                         </li>
                         <li class="nav-item">
-                            <span id="btn"><span class="noselect"><a class="nav-link" href="#">Breached</a></span><span
-                                    id="circle"></span></span>
+                            <a class="nav-link" href="#bt"><span id="btn"><span class="noselect">Bruteforce Time
+                                        Checker</span><span id="circle"></span></span> </a>
                         </li>
                     </ul>
                 </div>
@@ -63,11 +63,38 @@
         </div>
 
         <div class="mybtn">
-            <a href="#here">
+            <a href="#h">
                 <button class="top"><svg width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
                     </svg></button>
             </a>
+        </div>
+
+        <div class="contain" style="padding: 6rem 0 5rem 0;">
+            <div class="jumbotron" style="margin-bottom:0">
+                <div class="row">
+                    <div class="col">
+                        <section id="ab">
+                            <h2 align="center"><span class="text-shadow">Why Despoina?</span></h2>
+                            <br>
+                            <div style="width:60%; margin-left: auto; margin-right: auto;">
+                                <h3><i class="fas fa-caret-right"></i> Why Use This Tool?</h3>
+                                <p>It is the Ultimate Web based password tool. Our tool provides Strength Checker,
+                                    Password Generator and Bruteforce Time Checker all in one
+                                    place.</p>
+                            </div>
+                            <br><br>
+                            <div style="width:60%; margin-left: auto; margin-right: auto;">
+                                <p>Have a password, check its Strength<br>
+                                    Dont have a password, get one with our passowrd generator.<br>
+                                    Do you want to know how long would it take for bruteforcing your password use
+                                    Bruteforce Time Checker.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="contain" style="padding: 6rem 0 5rem 0;">
@@ -122,45 +149,19 @@
             </div>
 
             <div class="contain" style="padding: 6rem 0 5rem 0;">
-                <div class="jumbotron" style="margin-bottom:0">
-                    <div class="row">
-                        <div class="col">
-                            <section>
-                                <h2 align="center"><span class="text-shadow">Why</span></h2>
-                                <br>
-                                <div style="width:60%; margin-left: auto; margin-right: auto;">
-                                    <h3><i class="fas fa-caret-right"></i> WHY Despoina?</h3>
-                                    <p>It is the Ultimate Web based password tool. Our tool provides Strength Checker,
-                                        Password Generator, and Breached Password Checker all in one place.</p>
-                                </div>
-                                <br><br>
-                                <div style="width:60%; margin-left: auto; margin-right: auto;">
-                                    <h3><i class="fas fa-caret-right"></i> TIPS TO MAKE A STRONG PASSWORD</h3>
-                                    <p>Have a password, check its strength.<br>
-                                        Dont have a password, get one with our passowrd generator.<br>
-                                        Want to see if your password has ever been pawned off? use the Breached password
-                                        tool.</p>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contain" style="padding: 0;">
                 <div class="jumbotron text-center" style="margin-bottom:0">
                     <div class="row">
                         <div class="col">
-                            <h2 align=center><i class="fas fa-key"></i> <span class="text-shadow">PASSWORD
-                                    GENERATOR</span></h2>
-
                             <section id="pg" class="box">
+                                <h2 align=center><i class="fas fa-key"></i> <span class="text-shadow">PASSWORD
+                                        GENERATOR</span></h2>
                                 <p>Thinking a strong password is a tiring process. Use this to generate an Unique and
                                     strong password.</p>
-                                <div class="options" style="margin-top: 15%;">
+                                <div class="options">
                                     <div class="option">
                                         <label>Password Length: </label>
-                                        <input type="number" id="pglength" min="8" max="20" value="8">
+                                        <input type="number" autocomplete="off" id="pglength" min="8" max="20"
+                                            value="8">
                                     </div>
                                     <br>
                                     <div class="check"> Inculde Symbols:
@@ -172,15 +173,17 @@
                                     </div>
                                 </div>
                                 <br>
-                                <input name="finalpass" id="final_pass" type="text" readonly="readonly" class="output">
-                                <button type="button" onclick="GenPass()" class="butto">GENERATE</button>
-
+                                <form id="gen">
+                                    <input name="finalpass" id="final_pass" type="text" readonly="readonly"
+                                        class="output">
+                                    <button type="button" onclick="GenPass()" class="butto">Generate</button>
+                                </form>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contain" style="padding: 0;">
+            <div class="contain" style="padding: 6rem 0 5rem 0;">
                 <div class="jumbotron text-center" style="margin-bottom:0">
                     <div class="row">
                         <div class="col">
@@ -190,15 +193,17 @@
                                 </h2>
                                 <p>Want to know how is your password weak, strong or average? Enter your password and
                                     check for yourself.</p>
-                                <form class="test" style="margin-top: 13%;">
-                                    <input type="text" name="password" placeholder="Password" class="pin" id="y">
-                                    <button type="submit" calue="submit" class="butto">Submit</button>
-                                </form>
-
-                                <div class="bar">
-                                    <div class="line" id="bar-1"></div>
-                                    <div class="line" id="bar-2"></div>
-                                    <div class="line" id="bar-3"></div>
+                                <div id="form-contain">
+                                    <form class="test">
+                                        <input type="text" autocomplete="off" name="password" placeholder="Password"
+                                            class="pin" id="y">
+                                        <button type="submit" class="butto1">Submit</button>
+                                    </form>
+                                    <div class="bar">
+                                        <div class="line" id="bar-1"></div>
+                                        <div class="line" id="bar-2"></div>
+                                        <div class="line" id="bar-3"></div>
+                                    </div>
                                 </div>
                                 <div class="response"></div>
                                 <div class="tipTool">
@@ -211,14 +216,13 @@
             </div>
 
             <div class="contain" style="padding: 6rem 0 5rem 0;">
-                <div class="jumbotron" style="margin-bottom:0">
+                <div class="jumbotron text-center" style="margin-bottom:0">
                     <div class="row">
                         <div class="col">
-                            <section>
-                                <h2 align="center"><span class="text-shadow">Why</span></h2>
+                            <section id="bt">
+                                <h2 align="center"><span class="text-shadow">Bruteforce Time Checker</span></h2>
                                 <br>
                                 <div style="width:60%; margin-left: auto; margin-right: auto;">
-                                    <h3><i class="fas fa-caret-right"></i> Breached password Tool</h3>
                                     <p> How long will it take to crack your password?<br>
                                         Try here<br>
                                         Assuimng that the cracker computer uses a GeForce GTX 1080 (~30 million attempts
@@ -227,76 +231,57 @@
                                         Time = (Number of possible combinations ^ length) / 30 million keystrokes per
                                         second </p>
                                     <form class="teut">
-                                        <input type="text" name="password" placeholder="password">
-                                        <input type="submit" value="submit" onclick="check()">
-                                        <div class="result"></div>
+                                        <input type="text" autocomplete="off" name="password" placeholder="password"
+                                            class="pin" />
+                                        <button type="submit" onclick="check()" class="butto1">Check</button>
                                     </form>
+                                    <div class="result"></div>
                                 </div>
                                 <br><br>
-
                             </section>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contain" style="padding: 6rem 0 5rem 0;">
-                <div class="jumbotron" style="margin-bottom:0">
-                    <div class="row">
-                        <div class="col">
-                            <section>
-                                <h2 align="center"><span class="text-shadow">Why</span></h2>
-                                <br>
-                                <div style="width:60%; margin-left: auto; margin-right: auto;">
-                                    <h3><i class="fas fa-caret-right"></i> Breached password Tool</h3>
-                                    <p>Check If your password has ever been pawned.</p>
-                                </div>
-                                <br><br>
-
-                            </section>
-                        </div>
-                    </div>
+            <div class="text-center">
+                <div class="col">
+                    <section id="gs">
+                        <p>Liked our website? Star it on github.</p>
+                        <a href="https://github.com/Yash-RajSingh/Despoina">
+                            <button class="star">Star</button>
+                        </a>
+                    </section>
                 </div>
             </div>
-
-
-            <!-- <div class="text-center" style="margin-bottom:0; margin-top: 10%;">
-            <div class="col">
-                <section>
-                    <p>Liked our website? Star it on github.</p>
-                    <a href="">
-                        <button class="star">Star</button>
-                    </a>
-                </section>
-            </div>
-        </div> -->
 
             <footer>
                 <div class="jumbotron text-left" style="margin-bottom:0">
-                    <span>#</span>
+                    <span><a href="#h">Despoina</a></span>
                 </div>
 
                 <div class="jumbotron text-center" style="margin-bottom:0">
                     <div class='social-links'>
                         <div class='social-bttn flex-center' id="Ace">
-                            ACE&nbsp;<span>@twitter</span>
+                            ACE&nbsp;<span><a href="https://twitter.com/VIPS_ACE"> Twitter </a></span>
                         </div>
 
                         <div class='social-bttn flex-center' id="linkedin">
-                            <i class="fab fa-linkedin-in"></i>&nbsp;<span>linkedin</span>
+                            <i class="fab fa-linkedin-in"></i>&nbsp;<span><a
+                                    href="https://www.linkedin.com/company/vipsace/"> Linkedin</a></span>
                         </div>
 
                         <div class='social-bttn flex-center' id="github">
-                            <i class="fab fa-github"></i>&nbsp;<span>github</span>
+                            <i class="fab fa-github"></i>&nbsp;<span><a
+                                    href="https://github.com/vipsace">Github</a></span>
                         </div>
                     </div>
                     <br>
                     <br>
-                    <span>&copy; ACE CYBER SECURITY TEAM</span>
+                    <span id="cpy">&copy; ACE CYBER SECURITY TEAM</span>
                 </div>
-
                 <div class="jumbotron text-right" style="margin-bottom:0">
-                    <span><a href="#here">Despoina</a></span>
+                    <span><a href="#ab">About</a></span>
                 </div>
             </footer>
         </div>
