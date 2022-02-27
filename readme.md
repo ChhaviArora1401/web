@@ -5,7 +5,7 @@ This tool will save you against hacking and help you secure all your accounts.
 
 > Treat your password like your toothbrush. Don't let anybody else use it, and get a new one every six months.
 
-## Try it out here : [Despoina](https://yash-rajsingh.github.io/Despoina/)
+## Try it out here : [Despoina](chhaviarora1401.github.io/web/)
 
 ---
 #### Tech-Stack used :
@@ -48,12 +48,4 @@ To be fully secured, we suggest generating *different passwords* for different a
 
 ---
 
-## License
-
-© Yash-Raj-Singh, VIPS
-
-
-
 ![DESPOINA](https://user-images.githubusercontent.com/85413348/132133181-ea7cbac3-0f23-4849-9dec-b24f9f3d0c51.jpg)
-
-

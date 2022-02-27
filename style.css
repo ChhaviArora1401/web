@@ -423,7 +423,6 @@ ul.tip {
   min-width: 16rem;
   border-radius: 10px;
   padding: 0.5rem 0.5rem 0.5rem 2rem;
-  /* margin-left: auto; */
   margin-right: auto;
   border: 5px solid #aeaeae;
   margin-top: 9%;
@@ -704,4 +703,43 @@ footer .jumbotron:nth-child(2) {
   footer {
     flex-wrap: wrap;
   }
+}
+
+.container {  
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sub {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 44px;
+  font-size: 26px;
+  position: relative;
+}
+.sub::before {
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sub .sub-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+.sub:hover::before {
+  background: black;
+  width: 100%;
+}
+
+@media (max-width: 1220px) {
+  .container {
+  flex-direction: column;
+}
 }
